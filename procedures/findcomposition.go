@@ -6,101 +6,119 @@ import (
 	"fmt"
 )
 
-func DetailedHighestComposition() {
-	fmt.Println()
-	fmt.Println("-------------------------------------------------")
-	fmt.Println("              High Composition Menu              ")
-	fmt.Println("-------------------------------------------------")
-	fmt.Println("1. Find detailed Highest Vitamin C Composition   ")
-	fmt.Println("2. Find detailed Highest Vitamin B1 Composition  ")
-	fmt.Println("3. Find detailed Highest Vitamin B2 Composition  ")
-	fmt.Println("4. Find detailed Highest Vitamin B6 Composition  ")
-	fmt.Println("5. Find detailed Highest Vitamin B12 Composition ")
-	fmt.Println("6. Find detailed Highest Vitamin D Composition   ")
-	fmt.Println("7. Go back to main menu						  ")
-	fmt.Println("-------------------------------------------------")
+func DetailedHighestComposition(data m.ProductData) {
 	var determinator, n int
-	var data m.ProductData
+	n = 0
+	MenuDetailedHighestComposition()
 	fmt.Print("Please Enter Menu: ")
 	fmt.Scan(&determinator)
+	fmt.Print("CProMaxDebug: data[determinator-1].ProductDescription value @ procedures/composition.go before entering for determinator: ", data[determinator-1].ProductDescription, "\n")
 	for determinator != 7 {
-
 		if determinator == 1 {
 			//TODO: SOMEONE PLS FIX THIS BUGG ARRGHHHHH
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
 			idx := f.HighestCompositionVitaminC(data, n)
-			fmt.Println(idx)
-			fmt.Println(data[idx].ProductDescription)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
 			if data[idx].ProductDescription == "" {
 				fmt.Println("Empty Data")
 			} else {
 				fmt.Println("Product Name: ", data[idx].ProductDescription)
 				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminC, "mg")
 			}
-
 		} else if determinator == 2 {
-			if f.HighestCompositionVitaminB1(data, n) == 0 {
-				fmt.Println("Data Kosong")
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
+			idx := f.HighestCompositionVitaminB1(data, n)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
+			if data[idx].ProductDescription == "" {
+				fmt.Println("Empty Data")
 			} else {
-				fmt.Println(f.HighestCompositionVitaminB1(data, n))
+				fmt.Println("Product Name: ", data[idx].ProductDescription)
+				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminB1, "mg")
 			}
-
 		} else if determinator == 3 {
-			if f.HighestCompositionVitaminB2(data, n) == 0 {
-				fmt.Println("Data Kosong")
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
+			idx := f.HighestCompositionVitaminB2(data, n)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
+			if data[idx].ProductDescription == "" {
+				fmt.Println("Empty Data")
 			} else {
-				fmt.Println(f.HighestCompositionVitaminB2(data, n))
+				fmt.Println("Product Name: ", data[idx].ProductDescription)
+				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminB2, "mg")
 			}
 		} else if determinator == 4 {
-			if f.HighestCompositionVitaminB6(data, n) == 0 {
-				fmt.Println("Data Kosong")
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
+			idx := f.HighestCompositionVitaminB6(data, n)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
+			if data[idx].ProductDescription == "" {
+				fmt.Println("Empty Data")
 			} else {
-				fmt.Println(f.HighestCompositionVitaminB6(data, n))
+				fmt.Println("Product Name: ", data[idx].ProductDescription)
+				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminB6, "mg")
 			}
 		} else if determinator == 5 {
-			if f.HighestCompositionVitaminB12(data, n) == 0 {
-				fmt.Println("Data Kosong")
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
+			idx := f.HighestCompositionVitaminB12(data, n)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
+			if data[idx].ProductDescription == "" {
+				fmt.Println("Empty Data")
 			} else {
-				fmt.Println(f.HighestCompositionVitaminB12(data, n))
+				fmt.Println("Product Name: ", data[idx].ProductDescription)
+				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminB12, "mg")
 			}
 		} else if determinator == 6 {
-			if f.HighestCompositionVitaminD(data, n) == 0 {
-				fmt.Println("Data Kosong")
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
+			idx := f.HighestCompositionVitaminD(data, n)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
+			if data[idx].ProductDescription == "" {
+				fmt.Println("Empty Data")
 			} else {
-				fmt.Println(f.HighestCompositionVitaminD(data, n))
+				fmt.Println("Product Name: ", data[idx].ProductDescription)
+				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminD, "mg")
 			}
 		} else {
 			fmt.Print("Incorrect Menu. Please Enter Menu: ")
 			fmt.Scan(&determinator)
 		}
+		MenuDetailedHighestComposition()
 		fmt.Print("Please Enter Menu: ")
 		fmt.Scan(&determinator)
 	}
 }
 
-func DetailedLowestComposition() {
-	fmt.Println()
-	fmt.Println("-------------------------------------------------")
-	fmt.Println("               Low Composition Menu              ")
-	fmt.Println("-------------------------------------------------")
-	fmt.Println("1. Find detailed Highest Vitamin C Composition   ")
-	fmt.Println("2. Find detailed Highest Vitamin B1 Composition  ")
-	fmt.Println("3. Find detailed Highest Vitamin B2 Composition  ")
-	fmt.Println("4. Find detailed Highest Vitamin B6 Composition  ")
-	fmt.Println("5. Find detailed Highest Vitamin B12 Composition ")
-	fmt.Println("6. Find detailed Highest Vitamin D Composition   ")
-	fmt.Println("7. Go back to main menu						  ")
-	fmt.Println("-------------------------------------------------")
+
+func DetailedLowestComposition(data m.ProductData) {
 	var determinator, n int
-	var data m.ProductData
+	n = 0
+	MenuDetailedLowestComposition()
 	fmt.Print("Please Enter Menu: ")
 	fmt.Scan(&determinator)
+	fmt.Print("CProMaxDebug: data[determinator-1].ProductDescription value @ procedures/composition.go before entering for determinator: ", data[determinator-1].ProductDescription, "\n")
 	for determinator != 7 {
 		if determinator == 1 {
-			if f.LowestCompositionVitaminC(data, n-1) == 0 {
-				fmt.Println("Data Kosong")
+			fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
+			idx := f.LowestCompositionVitaminC(data, n)
+			fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
+			fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
+			fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
+			if data[idx].ProductDescription == "" {
+				fmt.Println("Empty Data")
 			} else {
-				fmt.Println(f.LowestCompositionVitaminC(data, n-1))
+				fmt.Println("Product Name: ", data[idx].ProductDescription)
+				fmt.Println("Amount Vitamin C in: ", data[idx].VitaminC, "mg")
 			}
+			/* Fix this plox
 		} else if determinator == 2 {
 			if f.LowestCompositionVitaminB1(data, n-1) == 0 {
 				fmt.Println("Data Kosong")
@@ -130,11 +148,12 @@ func DetailedLowestComposition() {
 				fmt.Println("Data Kosong")
 			} else {
 				fmt.Println(f.LowestCompositionVitaminD(data, n-1))
-			}
+			} */
 		} else {
 			fmt.Print("Incorrect Menu. Please Enter Menu: ")
 			fmt.Scan(&determinator)
 		}
+		MenuDetailedLowestComposition()
 		fmt.Print("Please Enter Menu: ")
 		fmt.Scan(&determinator)
 	}

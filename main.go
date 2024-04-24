@@ -21,9 +21,9 @@ func main() {
 		} else if determinator == 2 {
 			p.ViewAllArray(data, n)
 		} else if determinator == 3 {
-			p.DetailedHighestComposition()
+			p.DetailedHighestComposition(data)
 		} else if determinator == 4 {
-			p.DetailedLowestComposition()
+			p.DetailedLowestComposition(data)
 		}
 		p.Menu()
 		fmt.Print("Please Enter Menu: ")

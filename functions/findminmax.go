@@ -4,92 +4,95 @@ import (
 	m "Enervon-CProMax/models"
 )
 
-//TODO: PLS FIX THE FUNCTIONS FROM RETURNING FLOAT64 INTO RETURNING INT Index of array
+const MAXDATA int = m.MAXDATA
 
+/* Highest Composition Functions */
 func HighestCompositionVitaminC(data m.ProductData, n int) int {
-	var idxmaxVitaminC int = 0
-	var k int = 1
-	for k < n {
-		if data[idxmaxVitaminC].VitaminC < data[k].VitaminC {
-			idxmaxVitaminC = k
+	var idxmaxVitaminC int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[n].VitaminC > data[idxmaxVitaminC].VitaminC {
+			idxmaxVitaminC = n
 		}
-		k = k + 1
+		n++
 	}
 	return idxmaxVitaminC
 }
 
-func HighestCompositionVitaminB1(data m.ProductData, n int) float64 {
-	var maxVitaminB1 float64 = data[0].VitaminB1
-	var k int = 1
-	for k < n {
-		if maxVitaminB1 < data[k].VitaminB1 {
-			maxVitaminB1 = data[k].VitaminB1
+func HighestCompositionVitaminB1(data m.ProductData, n int) int {
+	var idxmaxVitaminB1 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[n].VitaminB1 > data[idxmaxVitaminB1].VitaminB1 {
+			idxmaxVitaminB1 = n
 		}
-		k = k + 1
+		n++
 	}
-	return maxVitaminB1
+	return idxmaxVitaminB1
 }
 
-func HighestCompositionVitaminB2(data m.ProductData, n int) float64 {
-	var maxVitaminB2 float64 = data[0].VitaminB2
-	var k int = 1
-	for k < n {
-		if maxVitaminB2 < data[k].VitaminB2 {
-			maxVitaminB2 = data[k].VitaminB2
+func HighestCompositionVitaminB2(data m.ProductData, n int) int {
+	var idxmaxVitaminB2 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[n].VitaminB2 > data[idxmaxVitaminB2].VitaminB2 {
+			idxmaxVitaminB2 = n
 		}
-		k = k + 1
+		n++
 	}
-	return maxVitaminB2
+	return idxmaxVitaminB2
 }
 
-func HighestCompositionVitaminB6(data m.ProductData, n int) float64 {
-	var maxVitaminB6 float64 = data[0].VitaminB6
-	var k int = 1
-	for k < n {
-		if maxVitaminB6 < data[k].VitaminB6 {
-			maxVitaminB6 = data[k].VitaminB6
+func HighestCompositionVitaminB6(data m.ProductData, n int) int {
+	var idxmaxVitaminB6 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[n].VitaminB6 > data[idxmaxVitaminB6].VitaminB6 {
+			idxmaxVitaminB6 = n
 		}
-		k = k + 1
+		n++
 	}
-	return maxVitaminB6
+	return idxmaxVitaminB6
 }
 
-func HighestCompositionVitaminB12(data m.ProductData, n int) float64 {
-	var maxVitaminB12 float64 = data[0].VitaminB12
-	var k int = 1
-	for k < n {
-		if maxVitaminB12 < data[k].VitaminB12 {
-			maxVitaminB12 = data[k].VitaminB12
+func HighestCompositionVitaminB12(data m.ProductData, n int) int {
+	var idxmaxVitaminB12 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[n].VitaminB12 > data[idxmaxVitaminB12].VitaminB12 {
+			idxmaxVitaminB12 = n
 		}
-		k = k + 1
+		n++
 	}
-	return maxVitaminB12
+	return idxmaxVitaminB12
 }
 
-func HighestCompositionVitaminD(data m.ProductData, n int) float64 {
-	var maxVitaminD float64 = data[0].VitaminD
-	var k int = 1
-	for k < n {
-		if maxVitaminD < data[k].VitaminD {
-			maxVitaminD = data[k].VitaminD
+func HighestCompositionVitaminD(data m.ProductData, n int) int {
+	var idxmaxVitaminD int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[n].VitaminD > data[idxmaxVitaminD].VitaminD {
+			idxmaxVitaminD = n
 		}
-		k = k + 1
+		n++
 	}
-	return maxVitaminD
+	return idxmaxVitaminD
 }
 
-func LowestCompositionVitaminC(data m.ProductData, n int) float64 {
-	var minVitaminC float64 = data[0].VitaminC
-	var k int = 1
-	for k < n {
-		if minVitaminC < data[k].VitaminC {
-			minVitaminC = data[k].VitaminC
-		}
-		k = k + 1
+/* Lowest Composition Functions */
+/* fix this plox */
+func LowestCompositionVitaminC(data m.ProductData, n int) int {
+	if len(data) == 0 || n <= 0 {
+		return -1 // return -1 or handle it as per your requirement
 	}
-	return minVitaminC
+
+	idxlowVitaminC := 0
+	minVitaminC := data[0].VitaminC
+
+	for i := 1; i < n && i < len(data); i++ {
+		if data[i].VitaminC < minVitaminC {
+			idxlowVitaminC = i
+			minVitaminC = data[i].VitaminC
+		}
+	}
+	return idxlowVitaminC
 }
 
+/*
 func LowestCompositionVitaminB1(data m.ProductData, n int) float64 {
 	var minVitaminB1 float64 = data[0].VitaminB1
 	var k int = 1
@@ -149,3 +152,4 @@ func LowestCompositionVitaminD(data m.ProductData, n int) float64 {
 	}
 	return minVitaminD
 }
+*/
