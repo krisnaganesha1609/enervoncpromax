@@ -12,8 +12,8 @@ func FillArray(data *m.ProductData, n *int) {
 	for determinator != 2 {
 		if determinator == 1 {
 			fmt.Println("Fill The Data (every data is nullable):")
-			fmt.Print("    Product Description: ")
-			fmt.Scanln(&data[*n].ProductDescription)
+			fmt.Print("    Product Name: ")
+			fmt.Scanln(&data[*n].ProductName)
 			fmt.Print("    Amount of Vitamin C Content (mg): ")
 			fmt.Scanln(&data[*n].VitaminC)
 			fmt.Print("    Amount of Niasinamida Content (mg): ")
