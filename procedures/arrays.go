@@ -12,17 +12,12 @@ func FillArray(data *m.ProductData, n *int) {
 	for determinator != 2 {
 		if determinator == 1 {
 			fmt.Println("Fill The Data (every data is nullable):")
-<<<<<<< HEAD
-			fmt.Print("    Product Name: ")
-			fmt.Scanln(&data[*n].ProductName)
-=======
 			fmt.Print("    Product name: ")
 			fmt.Scanln(&data[*n].ProductDescription)
 			for data[*n].ProductDescription == "" {
 				fmt.Print("Product name empty! Please enter product name: ")
 				fmt.Scanln(&data[*n].ProductDescription)
 			}
->>>>>>> 45465f4 (treewide: huge update)
 			fmt.Print("    Amount of Vitamin C Content (mg): ")
 			fmt.Scanln(&data[*n].VitaminC)
 			if data[*n].VitaminC == 0 {
