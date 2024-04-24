@@ -19,11 +19,9 @@ func Menu() {
 	fmt.Println("-------------------------------------")
 	fmt.Println("1. Add Product Data (Up To 20 Data)  ")
 	fmt.Println("2. View All Product Data             ")
-	fmt.Println("3. Find Highest Composition          ")
-	fmt.Println("4. Find Lowest Composition           ")
-	fmt.Println("5. Find Detailed Highest Composition ")
-	fmt.Println("6. Find Detailed Lowest Composition  ")
-	fmt.Println("7. Exit Program                      ")
+	fmt.Println("3. Find Detailed Highest Composition ")
+	fmt.Println("4. Find Detailed Lowest Composition  ")
+	fmt.Println("5. Exit Program                      ")
 	fmt.Println("-------------------------------------")
 }
 
@@ -33,7 +31,6 @@ func OnFillingArray() {
 	fmt.Println("-----------------------------------")
 	fmt.Println("1. Continue Adding More Data       ")
 	fmt.Println("2. Finish and Back To Main Menu    ")
-	fmt.Println("3. Edit Current Data               ")
 	fmt.Println("-----------------------------------")
 }
 
