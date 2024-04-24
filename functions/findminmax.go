@@ -4,16 +4,18 @@ import (
 	m "Enervon-CProMax/models"
 )
 
-func HighestCompositionVitaminC(data m.ProductData, n int) float64 {
-	var maxVitaminC float64 = data[0].VitaminC
+//TODO: PLS FIX THE FUNCTIONS FROM RETURNING FLOAT64 INTO RETURNING INT Index of array
+
+func HighestCompositionVitaminC(data m.ProductData, n int) int {
+	var idxmaxVitaminC int = 0
 	var k int = 1
 	for k < n {
-		if maxVitaminC < data[k].VitaminC {
-			maxVitaminC = data[k].VitaminC
+		if data[idxmaxVitaminC].VitaminC < data[k].VitaminC {
+			idxmaxVitaminC = k
 		}
 		k = k + 1
 	}
-	return maxVitaminC
+	return idxmaxVitaminC
 }
 
 func HighestCompositionVitaminB1(data m.ProductData, n int) float64 {
