@@ -12,17 +12,49 @@ func FillArray(data *m.ProductData, n *int) {
 	for determinator != 2 {
 		if determinator == 1 {
 			fmt.Println("Fill The Data (every data is nullable):")
+<<<<<<< HEAD
 			fmt.Print("    Product Name: ")
 			fmt.Scanln(&data[*n].ProductName)
+=======
+			fmt.Print("    Product name: ")
+			fmt.Scanln(&data[*n].ProductDescription)
+			for data[*n].ProductDescription == "" {
+				fmt.Print("Product name empty! Please enter product name: ")
+				fmt.Scanln(&data[*n].ProductDescription)
+			}
+>>>>>>> 45465f4 (treewide: huge update)
 			fmt.Print("    Amount of Vitamin C Content (mg): ")
 			fmt.Scanln(&data[*n].VitaminC)
-			fmt.Print("    Amount of Niasinamida Content (mg): ")
-			fmt.Scanln(&data[*n].Niasinamida)
-			fmt.Print("    Amount of Kalsium Pantotenat (mg): ")
-			fmt.Scanln(&data[*n].KalsiumPantotenat)
+			if data[*n].VitaminC == 0 {
+				data[*n].VitaminC = 0
+			}
 			fmt.Print("    Amount of Vitamin B1 Content (mg): ")
 			fmt.Scanln(&data[*n].VitaminB1)
-			//TODO: Tambahin lagi fmt Scanln buat struct field yang lainnya
+			if data[*n].VitaminB1 == 0 {
+				data[*n].VitaminB1 = 0
+			}
+			fmt.Print("    Amount of Vitamin B2 Content (mg): ")
+			fmt.Scanln(&data[*n].VitaminB2)
+			if data[*n].VitaminB2 == 0 {
+				data[*n].VitaminB2 = 0
+			}
+			fmt.Print("    Amount of Vitamin B6 Content (mg): ")
+			fmt.Scanln(&data[*n].VitaminB6)
+			if data[*n].VitaminB6 == 0 {
+				data[*n].VitaminB6 = 0
+			}
+			fmt.Print("    Amount of Vitamin B12 Content (mg): ")
+			fmt.Scanln(&data[*n].VitaminB12)
+			if data[*n].VitaminB12 == 0 {
+				data[*n].VitaminB12 = 0
+			}
+			fmt.Print("    Amount of Vitamin D Content (mg): ")
+			fmt.Scanln(&data[*n].VitaminD)
+			if data[*n].VitaminD == 0 {
+				data[*n].VitaminD = 0
+			}
+			// TODO: Tambahin lagi fmt Scanln buat struct field yang lainnya
+			// Done lol
 			fmt.Println("Data Ke-", *n+1, "Selesai Diisi")
 			if *n < MAXDATA {
 				*n = *n + 1
@@ -30,26 +62,13 @@ func FillArray(data *m.ProductData, n *int) {
 				*n = MAXDATA
 			}
 		}
-		// else if determinator == 3 {
-		// 	fmt.Println("Update The Data (if null, then the data will be set with previous one):")
-		// 	fmt.Print("    Product Description: ")
-		// 	fmt.Scanln(&data[*n-1].ProductDescription)
-		// 	fmt.Print("    Amount of Vitamin C Content (mg): ")
-		// 	fmt.Scanln(&data[*n-1].VitaminC)
-		// 	fmt.Print("    Amount of Niasinamida Content (mg): ")
-		// 	fmt.Scanln(&data[*n-1].Niasinamida)
-		// 	fmt.Print("    Amount of Kalsium Pantotenat (mg): ")
-		// 	fmt.Scanln(&data[*n-1].KalsiumPantotenat)
-		// 	fmt.Print("    Amount of Vitamin B1 Content (mg): ")
-		// 	fmt.Scanln(&data[*n-1].VitaminB1)
-		// 	//TODO: Tambahin lagi fmt Scanln buat struct field yang lainnya
-		// 	fmt.Println("Data Ke-", *n-1, "Berhasil diubah")
-		// }
 		OnFillingArray()
 		fmt.Scan(&determinator)
 	}
 }
 
-func ViewAllArray() {
-
+func ViewAllArray(data m.ProductData, n int) {
+	for i := 0; i < n; i++ {
+		fmt.Print("Data ke-", i+1, ":", data[n], "\n")
+	}
 }
