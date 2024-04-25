@@ -118,7 +118,7 @@ func DetailedLowestComposition(data m.ProductData) {
 			}
 		} else if determinator == 2 {
 			// fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
-			idx := f.LowestCompositionVitaminB1(data, n) - 1
+			idx := f.LowestCompositionVitaminB1(data, n)
 			// fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
 			// fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
 			// fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
@@ -130,7 +130,7 @@ func DetailedLowestComposition(data m.ProductData) {
 			}
 		} else if determinator == 3 {
 			// fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
-			idx := f.LowestCompositionVitaminB2(data, n) - 1
+			idx := f.LowestCompositionVitaminB2(data, n)
 			// fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
 			// fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
 			// fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
@@ -142,7 +142,7 @@ func DetailedLowestComposition(data m.ProductData) {
 			}
 		} else if determinator == 4 {
 			// fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
-			idx := f.LowestCompositionVitaminB6(data, n) - 1
+			idx := f.LowestCompositionVitaminB6(data, n)
 			// fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
 			// fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
 			// fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
@@ -154,7 +154,7 @@ func DetailedLowestComposition(data m.ProductData) {
 			}
 		} else if determinator == 5 {
 			// fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
-			idx := f.LowestCompositionVitaminB12(data, n) - 1
+			idx := f.LowestCompositionVitaminB12(data, n)
 			// fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
 			// fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
 			// fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
@@ -166,7 +166,7 @@ func DetailedLowestComposition(data m.ProductData) {
 			}
 		} else if determinator == 6 {
 			// fmt.Print("CProMaxDebug: determinator, n value @ procedures/composition.go: ", determinator, n, "\n")
-			idx := f.LowestCompositionVitaminD(data, n) - 1
+			idx := f.LowestCompositionVitaminD(data, n)
 			// fmt.Print("CProMaxDebug: idx value @ procedures/composition.go: ", idx, "\n")
 			// fmt.Print("CProMaxDebug: data[idx].ProductDescription value @ procedures/composition.go: ", data[idx].ProductDescription, "\n")
 			// fmt.Print("CProMaxDebug: data[idx+1].ProductDescription value @ procedures/composition.go: ", data[idx+1].ProductDescription, "\n")
