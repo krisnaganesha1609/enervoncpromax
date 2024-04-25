@@ -74,7 +74,6 @@ func HighestCompositionVitaminD(data m.ProductData, n int) int {
 }
 
 /* Lowest Composition Functions */
-/* fix this plox */
 func LowestCompositionVitaminC(data m.ProductData, n int) int {
 	var idxlowVitaminC int = 0
 	var k int = 1

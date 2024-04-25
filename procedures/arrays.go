@@ -53,7 +53,7 @@ func FillArray(data *m.ProductData, n *int) {
 			}
 			// TODO: Tambahin lagi fmt Scanln buat struct field yang lainnya
 			// Done lol
-			fmt.Println("Data Ke-", *n+1, "Selesai Diisi")
+			fmt.Println("Data index [", *n, "] has been filled.")
 			*n++
 			if *n >= MAXDATA {
 				*n = MAXDATA
@@ -68,10 +68,10 @@ func FillArray(data *m.ProductData, n *int) {
 
 func ViewAllArray(data m.ProductData, n int) {
 	if n == 0 {
-		fmt.Println("Data Kosong")
+		fmt.Println("Data is empty")
 	} else {
 		for i := 0; i < n; i++ {
-			fmt.Print("Data ke-", i+1, ":", data[i], "\n")
+			fmt.Print("Data index [", i, "] :", data[i], "\n")
 		}
 	}
 }

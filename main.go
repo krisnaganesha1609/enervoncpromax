@@ -9,7 +9,8 @@ import (
 func main() {
 	var determinator, n int
 	var data m.ProductData
-	fmt.Println("Way Down We Go - KALEO") //CAMEO :P
+	// malu euy awoakwoakwaowkaowk
+	// fmt.Println("Way Down We Go - KALEO") //CAMEO :P
 	p.Start()
 	p.Menu()
 	fmt.Print("Please Enter Menu: ")
