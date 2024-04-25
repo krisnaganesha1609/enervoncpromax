@@ -76,80 +76,68 @@ func HighestCompositionVitaminD(data m.ProductData, n int) int {
 /* Lowest Composition Functions */
 /* fix this plox */
 func LowestCompositionVitaminC(data m.ProductData, n int) int {
-	if len(data) == 0 || n <= 0 {
-		return -1 // return -1 or handle it as per your requirement
-	}
-
-	idxlowVitaminC := 0
-	minVitaminC := data[0].VitaminC
-
-	for i := 1; i < n && i < len(data); i++ {
-		if data[i].VitaminC < minVitaminC {
-			idxlowVitaminC = i
-			minVitaminC = data[i].VitaminC
+	var idxlowVitaminC int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
+			idxlowVitaminC = n
 		}
+		n++
 	}
 	return idxlowVitaminC
 }
 
-/*
-func LowestCompositionVitaminB1(data m.ProductData, n int) float64 {
-	var minVitaminB1 float64 = data[0].VitaminB1
-	var k int = 1
-	for k < n {
-		if minVitaminB1 < data[k].VitaminB1 {
-			minVitaminB1 = data[k].VitaminB1
+func LowestCompositionVitaminB1(data m.ProductData, n int) int {
+	var idxlowVitaminB1 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[idxlowVitaminB1].VitaminB1 > data[n].VitaminB1 {
+			idxlowVitaminB1 = n
 		}
-		k = k + 1
+		n++
 	}
-	return minVitaminB1
+	return idxlowVitaminB1
 }
 
-func LowestCompositionVitaminB2(data m.ProductData, n int) float64 {
-	var minVitaminB2 float64 = data[0].VitaminB2
-	var k int = 1
-	for k < n {
-		if minVitaminB2 < data[k].VitaminB2 {
-			minVitaminB2 = data[k].VitaminB2
+func LowestCompositionVitaminB2(data m.ProductData, n int) int {
+	var idxlowVitaminB2 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[idxlowVitaminB2].VitaminB2 > data[n].VitaminB2 {
+			idxlowVitaminB2 = n
 		}
-		k = k + 1
+		n++
 	}
-	return minVitaminB2
+	return idxlowVitaminB2
 }
 
-func LowestCompositionVitaminB6(data m.ProductData, n int) float64 {
-	var minVitaminB6 float64 = data[0].VitaminB6
-	var k int = 1
-	for k < n {
-		if minVitaminB6 < data[k].VitaminB6 {
-			minVitaminB6 = data[k].VitaminB6
+func LowestCompositionVitaminB6(data m.ProductData, n int) int {
+	var idxlowVitaminB6 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[idxlowVitaminB6].VitaminB6 > data[n].VitaminB6 {
+			idxlowVitaminB6 = n
 		}
-		k = k + 1
+		n++
 	}
-	return minVitaminB6
+	return idxlowVitaminB6
 }
 
-func LowestCompositionVitaminB12(data m.ProductData, n int) float64 {
-	var minVitaminB12 float64 = data[0].VitaminB12
-	var k int = 1
-	for k < n {
-		if minVitaminB12 < data[k].VitaminB12 {
-			minVitaminB12 = data[k].VitaminB12
+func LowestCompositionVitaminB12(data m.ProductData, n int) int {
+	var idxlowVitaminB12 int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[idxlowVitaminB12].VitaminB12 > data[n].VitaminB12 {
+			idxlowVitaminB12 = n
 		}
-		k = k + 1
+		n++
 	}
-	return minVitaminB12
+	return idxlowVitaminB12
 }
 
-func LowestCompositionVitaminD(data m.ProductData, n int) float64 {
-	var minVitaminD float64 = data[0].VitaminD
-	var k int = 1
-	for k < n {
-		if minVitaminD < data[k].VitaminD {
-			minVitaminD = data[k].VitaminD
+func LowestCompositionVitaminD(data m.ProductData, n int) int {
+	var idxlowVitaminD int
+	for n < len(data) && n + 1 <= MAXDATA {
+		if data[idxlowVitaminD].VitaminD > data[n].VitaminD {
+			idxlowVitaminD = n
 		}
-		k = k + 1
+		n++
 	}
-	return minVitaminD
+	return idxlowVitaminD
 }
-*/
+
