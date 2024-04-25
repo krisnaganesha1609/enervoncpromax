@@ -34,6 +34,36 @@ func OnFillingArray() {
 	fmt.Println("-----------------------------------")
 }
 
+func MenuDetailedHighestComposition() {
+	fmt.Println()
+	fmt.Println("-------------------------------------------------")
+	fmt.Println("              High Composition Menu              ")
+	fmt.Println("-------------------------------------------------")
+	fmt.Println("1. Find detailed Highest Vitamin C Composition   ")
+	fmt.Println("2. Find detailed Highest Vitamin B1 Composition  ")
+	fmt.Println("3. Find detailed Highest Vitamin B2 Composition  ")
+	fmt.Println("4. Find detailed Highest Vitamin B6 Composition  ")
+	fmt.Println("5. Find detailed Highest Vitamin B12 Composition ")
+	fmt.Println("6. Find detailed Highest Vitamin D Composition   ")
+	fmt.Println("7. Go back to main menu				")
+	fmt.Println("-------------------------------------------------")
+}
+
+func MenuDetailedLowestComposition() {
+	fmt.Println()
+	fmt.Println("-------------------------------------------------")
+	fmt.Println("               Low Composition Menu              ")
+	fmt.Println("-------------------------------------------------")
+	fmt.Println("1. Find detailed Highest Vitamin C Composition   ")
+	fmt.Println("2. Find detailed Highest Vitamin B1 Composition  ")
+	fmt.Println("3. Find detailed Highest Vitamin B2 Composition  ")
+	fmt.Println("4. Find detailed Highest Vitamin B6 Composition  ")
+	fmt.Println("5. Find detailed Highest Vitamin B12 Composition ")
+	fmt.Println("6. Find detailed Highest Vitamin D Composition   ")
+	fmt.Println("7. Go back to main menu				 ")
+	fmt.Println("-------------------------------------------------")
+}
+
 func End() {
 	fmt.Println()
 	fmt.Println("----------------------------------")

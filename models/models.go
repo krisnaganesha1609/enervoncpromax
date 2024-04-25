@@ -8,7 +8,6 @@ type ProductComposition struct {
 	VitaminB6          float64
 	VitaminB12         float64
 	VitaminD           float64
-	//TODO: Add More Product Composition Field E.g :(Fosfor, Vitamin D, Protein, Cholesterol, etc.)
 }
 
 const MAXDATA int = 20
