@@ -51,8 +51,6 @@ func FillArray(data *m.ProductData, n *int) {
 			if data[*n].VitaminD == 0 {
 				data[*n].VitaminD = 0
 			}
-			// TODO: Tambahin lagi fmt Scanln buat struct field yang lainnya
-			// Done lol
 			fmt.Println("Data index [", *n, "] has been filled.")
 			*n++
 			if *n >= MAXDATA {
