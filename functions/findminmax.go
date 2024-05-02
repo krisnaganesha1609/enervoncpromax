@@ -8,67 +8,73 @@ const MAXDATA int = m.MAXDATA
 
 /* Highest Composition Functions */
 func HighestCompositionVitaminC(data m.ProductData, n int) int {
-	var idxmaxVitaminC int
-	for n < len(data) && n+1 <= MAXDATA {
-		if data[n].VitaminC > data[idxmaxVitaminC].VitaminC {
-			idxmaxVitaminC = n
+	var idxmaxVitaminC int = 0
+	var k int = 1
+	for k < n {
+		if data[idxmaxVitaminC].VitaminC < data[k].VitaminC {
+			idxmaxVitaminC = k
 		}
-		n++
+		k++
 	}
 	return idxmaxVitaminC
 }
 
 func HighestCompositionVitaminB1(data m.ProductData, n int) int {
 	var idxmaxVitaminB1 int
-	for n < len(data) && n+1 <= MAXDATA {
-		if data[n].VitaminB1 > data[idxmaxVitaminB1].VitaminB1 {
-			idxmaxVitaminB1 = n
+	var k int = 1
+	for k < n {
+		if data[idxmaxVitaminB1].VitaminB1 < data[k].VitaminB1 {
+			idxmaxVitaminB1 = k
 		}
-		n++
+		k++
 	}
 	return idxmaxVitaminB1
 }
 
 func HighestCompositionVitaminB2(data m.ProductData, n int) int {
 	var idxmaxVitaminB2 int
-	for n < len(data) && n+1 <= MAXDATA {
-		if data[n].VitaminB2 > data[idxmaxVitaminB2].VitaminB2 {
-			idxmaxVitaminB2 = n
+	var k int = 1
+	for k < n {
+		if data[idxmaxVitaminB2].VitaminB2 < data[k].VitaminB2 {
+			idxmaxVitaminB2 = k
 		}
-		n++
+		k++
 	}
 	return idxmaxVitaminB2
 }
 
 func HighestCompositionVitaminB6(data m.ProductData, n int) int {
 	var idxmaxVitaminB6 int
-	for n < len(data) && n+1 <= MAXDATA {
-		if data[n].VitaminB6 > data[idxmaxVitaminB6].VitaminB6 {
-			idxmaxVitaminB6 = n
+	var k int = 1
+	for k < n {
+		if data[idxmaxVitaminB6].VitaminB6 < data[k].VitaminB6 {
+			idxmaxVitaminB6 = k
 		}
-		n++
+		k++
 	}
 	return idxmaxVitaminB6
 }
 
 func HighestCompositionVitaminB12(data m.ProductData, n int) int {
 	var idxmaxVitaminB12 int
-	for n < len(data) && n+1 <= MAXDATA {
-		if data[n].VitaminB12 > data[idxmaxVitaminB12].VitaminB12 {
-			idxmaxVitaminB12 = n
+	var k int = 1
+	for k < n {
+		if data[idxmaxVitaminB12].VitaminB12 < data[k].VitaminB12 {
+			idxmaxVitaminB12 = k
 		}
-		n++
+		k++
 	}
 	return idxmaxVitaminB12
 }
 
 func HighestCompositionVitaminD(data m.ProductData, n int) int {
 	var idxmaxVitaminD int
-	for n < len(data) && n+1 <= MAXDATA {
-		if data[n].VitaminD > data[idxmaxVitaminD].VitaminD {
-			idxmaxVitaminD = n
+	var k int = 1
+	for k < n {
+		if data[idxmaxVitaminD].VitaminD < data[k].VitaminD {
+			idxmaxVitaminD = k
 		}
-		n++
+		k++
 	}
 	return idxmaxVitaminD
 }
@@ -77,12 +83,6 @@ func HighestCompositionVitaminD(data m.ProductData, n int) int {
 func LowestCompositionVitaminC(data m.ProductData, n int) int {
 	var idxlowVitaminC int = 0
 	var k int = 1
-	// for n < len(data) && n+1 <= MAXDATA {
-	// 	if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
-	// 		idxlowVitaminC = n
-	// 	}
-	// 	n = n + 1
-	// }
 	for k < n {
 		if data[idxlowVitaminC].VitaminC > data[k].VitaminC {
 			idxlowVitaminC = k
@@ -95,12 +95,6 @@ func LowestCompositionVitaminC(data m.ProductData, n int) int {
 func LowestCompositionVitaminB1(data m.ProductData, n int) int {
 	var idxlowVitaminB1 int
 	var k int = 1
-	// for n < len(data) && n+1 <= MAXDATA {
-	// 	if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
-	// 		idxlowVitaminC = n
-	// 	}
-	// 	n = n + 1
-	// }
 	for k < n {
 		if data[idxlowVitaminB1].VitaminB1 > data[k].VitaminB1 {
 			idxlowVitaminB1 = k
@@ -113,12 +107,6 @@ func LowestCompositionVitaminB1(data m.ProductData, n int) int {
 func LowestCompositionVitaminB2(data m.ProductData, n int) int {
 	var idxlowVitaminB2 int
 	var k int = 1
-	// for n < len(data) && n+1 <= MAXDATA {
-	// 	if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
-	// 		idxlowVitaminC = n
-	// 	}
-	// 	n = n + 1
-	// }
 	for k < n {
 		if data[idxlowVitaminB2].VitaminB2 > data[k].VitaminB2 {
 			idxlowVitaminB2 = k
@@ -131,12 +119,6 @@ func LowestCompositionVitaminB2(data m.ProductData, n int) int {
 func LowestCompositionVitaminB6(data m.ProductData, n int) int {
 	var idxlowVitaminB6 int
 	var k int = 1
-	// for n < len(data) && n+1 <= MAXDATA {
-	// 	if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
-	// 		idxlowVitaminC = n
-	// 	}
-	// 	n = n + 1
-	// }
 	for k < n {
 		if data[idxlowVitaminB6].VitaminB6 > data[k].VitaminB6 {
 			idxlowVitaminB6 = k
@@ -149,12 +131,6 @@ func LowestCompositionVitaminB6(data m.ProductData, n int) int {
 func LowestCompositionVitaminB12(data m.ProductData, n int) int {
 	var idxlowVitaminB12 int
 	var k int = 1
-	// for n < len(data) && n+1 <= MAXDATA {
-	// 	if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
-	// 		idxlowVitaminC = n
-	// 	}
-	// 	n = n + 1
-	// }
 	for k < n {
 		if data[idxlowVitaminB12].VitaminB12 > data[k].VitaminB12 {
 			idxlowVitaminB12 = k
@@ -167,12 +143,6 @@ func LowestCompositionVitaminB12(data m.ProductData, n int) int {
 func LowestCompositionVitaminD(data m.ProductData, n int) int {
 	var idxlowVitaminD int
 	var k int = 1
-	// for n < len(data) && n+1 <= MAXDATA {
-	// 	if data[idxlowVitaminC].VitaminC > data[n].VitaminC {
-	// 		idxlowVitaminC = n
-	// 	}
-	// 	n = n + 1
-	// }
 	for k < n {
 		if data[idxlowVitaminD].VitaminD > data[k].VitaminD {
 			idxlowVitaminD = k
